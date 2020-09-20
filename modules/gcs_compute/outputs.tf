@@ -1,0 +1,1 @@
+#Copyright Asere´s Corporation
