@@ -1,10 +1,14 @@
 # Create server #1
 resource "google_compute_instance" "server-1" {
-  name         = "${var.app_name}-${var.app_environment}-vm1"
+  name         = "${var.app_name}-${var.app_environment}-vm"
   machine_type = "f1-micro"
   zone         = var.gcp_zone_1
-  hostname     = "${var.app_name}-${var.app_environment}-vm1.${var.app_domain}"
+  hostname     = "${var.app_name}-${var.app_environment}-vm.${var.app_domain}"
   tags         = ["ssh"]
+
+   metadata = {
+    ssh-keys = "${var.user}:${file("${var.ssh_key}")}"
+  }
 
   boot_disk {
     initialize_params {

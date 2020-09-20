@@ -1,7 +1,7 @@
 # Application Definition 
-app_name        = "cloud"
+app_name        = "server-1"
 app_environment = "dev"
-app_domain      = "devcloud.com"
+app_domain      = "cloud.com"
 app_project     = "playground-s-11-ac2ebe15"
 app_node_count  = 1
 
