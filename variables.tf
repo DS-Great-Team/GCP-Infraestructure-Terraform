@@ -85,3 +85,9 @@ variable "ssh_cidr_blocks" {
   description = "A list of CIDRs allowed to SSH to the bastion. Override the module default by specifying an empty list, []"
   default     = ["0.0.0.0/0"]
 }
+
+variable "availability_zones" {
+  description = "The availability zones within $region where the Auto Scaling Group can place the bastion."
+  type        = list
+  default     = ["us-central1-a"]
+}
