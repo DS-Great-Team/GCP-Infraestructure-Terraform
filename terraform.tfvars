@@ -12,3 +12,4 @@ gcp_auth_file = "~/github/DS-Great-Team/GCP-Infraestructure-Terraform/auth/auth.
 
 # GCP Netwok
 private_subnet_cidr_1  = "10.10.1.0/24"
+public_subnet_cidr_1 = "35.10.1.0/24"
