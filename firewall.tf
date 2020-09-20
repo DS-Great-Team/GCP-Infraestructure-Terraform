@@ -26,7 +26,7 @@ resource "google_compute_firewall" "bastion_ssh" {
   count             = length(var.ssh_cidr_blocks) > 0 ? 1 : 0
   name        = "${var.bastion_name}-ssh"
   description = "Allow SSH access to the ${var.bastion_name} bastion"
-  network     = var.network_name.vpc.name
+  network     = "${google_compute_network.vpc.name}"
 
   source_ranges = var.ssh_cidr_blocks
   target_tags   = [var.bastion_name]

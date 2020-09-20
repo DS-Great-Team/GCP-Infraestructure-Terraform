@@ -7,7 +7,7 @@ resource "google_compute_instance" "server-1" {
   tags         = ["ssh"]
 
    metadata = {
-    ssh-keys = "${var.user}:${file("${var.ssh_key}")}"
+    ssh-keys = "${var.user}:${file("${var.ssh_public_key_file}")}"
   }
 
   boot_disk {

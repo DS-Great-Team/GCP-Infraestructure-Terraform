@@ -16,7 +16,7 @@ resource "google_compute_instance_template" "bastion" {
 
   network_interface {
     network    = google_compute_network.vpc.name
-    subnetwork = var.subnetwork_name
+    subnetwork = google_compute_subnetwork.public_subnet_1.name
     # This is required to configure a public IP address.
     access_config {}
   }

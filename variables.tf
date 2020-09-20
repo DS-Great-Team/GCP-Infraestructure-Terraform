@@ -54,7 +54,7 @@ variable "user" {
   default = "ubuntu"
 }
 
-variable "ssh_key" {
+variable "ssh_public_key_file" {
   type = string
   default = "~/.ssh/id_rsa_gcp.pub"
 }
@@ -78,14 +78,6 @@ variable "image_family" {
 variable "image_project" {
   description = "The project of the compute image owner."
   default     = "gce-uefi-images"
-}
-
-variable "subnetwork_name" {
-  description = "The name of the existing subnetwork where the bastion will be created."
-}
-
-variable "network_name" {
-  description = "The name of the network where the bastion SSH firewall rule will be created. This network is the parent of $subnetwork"
 }
 
 variable "ssh_cidr_blocks" {
