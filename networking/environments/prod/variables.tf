@@ -2,6 +2,12 @@
 
 #prod variables definition
 
-variable "vpc_name" {}
-variable "subnetwork_name" {}
-variable "subnetwork_cidr" {}
+variable "vpc_name" {
+}
+
+variable "subnetwork_name" {
+}
+
+variable "subnetwork_cidr" {
+}
+

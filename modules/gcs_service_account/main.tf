@@ -11,6 +11,6 @@ resource "google_project_service" "iam" {
 }
 
 resource "google_service_account" "service_account" {
-  account_id   = "${var.service_account_id}"
-  display_name = "${var.service_account_description}"
+  account_id   = var.service_account_id
+  display_name = var.service_account_description
 }

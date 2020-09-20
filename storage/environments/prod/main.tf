@@ -3,15 +3,8 @@
 #prod terraform module instantiation
 
 provider "google" {
-  project = "my-project-prod-prod"
+  project = "prod-project-cloud"
   region  = "us-central1"
-}
-
-terraform {
-  backend "gcs" {
-    bucket = "my-state-bucket"
-    prefix = "Storage/state/prod"
-  }
 }
 
 module "state_bucket" {

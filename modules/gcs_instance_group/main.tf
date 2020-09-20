@@ -11,6 +11,7 @@ resource "google_compute_instance_template" "pool-template" {
   }
   network_interface {
     network = var.network
+    subnetwork = var.subnetwork
   }
 
   lifecycle {
@@ -19,7 +20,8 @@ resource "google_compute_instance_template" "pool-template" {
 }
 
 resource "google_compute_region_instance_group_manager" "pool" {
-  name               = var.instance_group_name
+  name               = "group-${var.instance_group_name}"
+  base_instance_name = "instance-${var.instance_group_name}"
   region             = var.region
   target_size        = var.size
   wait_for_instances = true

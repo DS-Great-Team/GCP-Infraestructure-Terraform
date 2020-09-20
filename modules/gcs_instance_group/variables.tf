@@ -7,4 +7,5 @@ variable "compute_image" {}
 variable "disk_size_gb" {}
 variable "region" {}
 variable "network" {}
-variable "target_pools" {}
+variable "subnetwork" {}
+variable "instance_group_name" {}

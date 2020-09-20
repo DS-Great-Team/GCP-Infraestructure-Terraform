@@ -14,12 +14,12 @@
 #limitations under the License."
 
 resource "google_compute_firewall" "firewall_rule" {
-  name    = "${var.firewall_rule_name}"
-  network = "${var.firewall_vpc}"
+  name    = var.firewall_rule_name
+  network = var.firewall_vpc
   allow {
-    protocol = "${var.firewall_protocol}"
-    ports    = "${var.firewall_ports}"
+    protocol = var.firewall_protocol
+    ports    = var.firewall_ports
   }
-  target_tags   = ["${var.firewall_target_tags}"]
-  source_ranges = ["${var.firewall_source_range}"]
+  target_tags   = var.firewall_target_tags
+  source_ranges = var.firewall_source_ranges
 }

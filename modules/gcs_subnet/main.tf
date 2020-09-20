@@ -14,7 +14,7 @@
 #limitations under the License."
 
 resource "google_compute_subnetwork" "subnet_definition" {
-  name          = "${var.subnetwork_name}"
-  ip_cidr_range = "${var.subnetwork_cidr}"
-  network       = "${var.subnetwork_vpc}"
+  name          = var.subnetwork_name
+  ip_cidr_range = var.subnetwork_cidr
+  network       = var.subnetwork_vpc
 }
